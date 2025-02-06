@@ -36,9 +36,7 @@ public class Repaso {
 
                 		double lado = scanner.nextDouble();
 	
-                	double areaCuadrado = lado * lado;
-
-                		System.out.println("El area de la figura es: " + areaCuadrado);
+                		areaCuadrado(lado);
 
                 		break;
  
@@ -46,9 +44,7 @@ public class Repaso {
 
                 		double radio = scanner.nextDouble();
 
-                		double areaCirculo = Math.PI * radio * radio;
-
-                		System.out.println("El area de la figura es: " + areaCirculo);
+                		areaCirculo(radio);
 
                 		break;
             
@@ -60,9 +56,7 @@ public class Repaso {
 
                 		double altura = scanner.nextDouble();
 
-                		double areaTriangulo = (base * altura) / 2;
-
-                		System.out.println("El area de la figura es: " + areaTriangulo);
+                		areaTriangulo(base, altura);
 
                 		break;
 
@@ -72,5 +66,23 @@ public class Repaso {
         	}
 
     	}
+
+    private static void areaTriangulo(double base, double altura) {
+        double areaTriangulo = (base * altura) / 2;
+        
+        System.out.println("El area de la figura es: " + areaTriangulo);
+    }
+
+    private static void areaCirculo(double radio) {
+        double areaCirculo = Math.PI * radio * radio;
+        
+        System.out.println("El area de la figura es: " + areaCirculo);
+    }
+
+    private static void areaCuadrado(double lado) {
+        double areaCuadrado = lado * lado;
+        
+        System.out.println("El area de la figura es: " + areaCuadrado);
+    }
 
 }
